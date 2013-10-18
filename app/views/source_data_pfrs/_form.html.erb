@@ -1,0 +1,41 @@
+<%= form_for(@source_data_pfr) do |f| %>
+  <% if @source_data_pfr.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@source_data_pfr.errors.count, "error") %> prohibited this source_data_pfr from being saved:</h2>
+
+      <ul>
+      <% @source_data_pfr.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :coach %><br>
+    <%= f.text_field :coach %>
+  </div>
+  <div class="field">
+    <%= f.label :year %><br>
+    <%= f.number_field :year %>
+  </div>
+  <div class="field">
+    <%= f.label :age %><br>
+    <%= f.number_field :age %>
+  </div>
+  <div class="field">
+    <%= f.label :level %><br>
+    <%= f.text_field :level %>
+  </div>
+  <div class="field">
+    <%= f.label :employer %><br>
+    <%= f.text_field :employer %>
+  </div>
+  <div class="field">
+    <%= f.label :role %><br>
+    <%= f.text_field :role %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

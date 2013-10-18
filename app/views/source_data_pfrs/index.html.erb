@@ -1,0 +1,37 @@
+<h1>Listing source_data_pfrs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Coach</th>
+      <th>Year</th>
+      <th>Age</th>
+      <th>Level</th>
+      <th>Employer</th>
+      <th>Role</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @source_data_pfrs.each do |source_data_pfr| %>
+      <tr>
+        <td><%= source_data_pfr.coach %></td>
+        <td><%= source_data_pfr.year %></td>
+        <td><%= source_data_pfr.age %></td>
+        <td><%= source_data_pfr.level %></td>
+        <td><%= source_data_pfr.employer %></td>
+        <td><%= source_data_pfr.role %></td>
+        <td><%= link_to 'Show', source_data_pfr %></td>
+        <td><%= link_to 'Edit', edit_source_data_pfr_path(source_data_pfr) %></td>
+        <td><%= link_to 'Destroy', source_data_pfr, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Source data pfr', new_source_data_pfr_path %>

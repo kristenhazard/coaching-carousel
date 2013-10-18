@@ -1,0 +1,35 @@
+<h1>Listing coach_employments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Coach</th>
+      <th>Team</th>
+      <th>Year</th>
+      <th>Role</th>
+      <th>Age</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @coach_employments.each do |coach_employment| %>
+      <tr>
+        <td><%= coach_employment.coach.name %></td>
+        <td><%= coach_employment.team.name %></td>
+        <td><%= coach_employment.year %></td>
+        <td><%= coach_employment.role %></td>
+        <td><%= coach_employment.age %></td>
+        <td><%= link_to 'Show', coach_employment %></td>
+        <td><%= link_to 'Edit', edit_coach_employment_path(coach_employment) %></td>
+        <td><%= link_to 'Destroy', coach_employment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Coach employment', new_coach_employment_path %>

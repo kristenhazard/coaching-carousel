@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  coach: MyString
+  year: 1
+  age: 1
+  level: MyString
+  employer: MyString
+  role: MyString
+
+two:
+  coach: MyString
+  year: 1
+  age: 1
+  level: MyString
+  employer: MyString
+  role: MyString

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Coach:</strong>
+  <%= @coach_employment.coach_id %>
+</p>
+
+<p>
+  <strong>Team:</strong>
+  <%= @coach_employment.team_id %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @coach_employment.year %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @coach_employment.role %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @coach_employment.age %>
+</p>
+
+<%= link_to 'Edit', edit_coach_employment_path(@coach_employment) %> |
+<%= link_to 'Back', coach_employments_path %>
